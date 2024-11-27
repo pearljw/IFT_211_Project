@@ -3,7 +3,6 @@
 def number_to_decimal(number, base):
 
     decimal = int(number, base)
-
     
     octal = oct(decimal)
     hexadecimal = hex(decimal)
