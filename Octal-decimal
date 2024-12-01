@@ -1,0 +1,17 @@
+def convert_octal(octal_number):
+    try:
+        decimal_number = int(octal_number, 8)
+
+        binary_number = bin(decimal_number)[2:]
+
+        hexadecimal_number = hex(decimal_number)[2:].upper()
+
+        print(f"Octal: {octal_number}")
+        print(f"Decimal: {decimal_number}")
+        print(f"Binary: {binary_number}")
+        print(f"Hexadecimal: {hexadecimal_number}")
+    except ValueError:
+        print("Invalid octal number. Please provide a valid octal input.")
+
+octal_number = input("Enter an octal number: ")
+convert_octal(octal_number)
