@@ -72,17 +72,13 @@ print(f"Octal: {octal_output}")
 
 
 # OCTAL TO DECIMAL, BINARY AND HEXADECIMAL
-def convert_octal(octal_number):
+def convert_to_octal(octal_number, base):
     try:
-        decimal_number = int(octal_number, 8)
+        decimal_number = int(octal_number, base)
 
         binary_number = bin(decimal_number)[2:]
 
         hexadecimal_number = hex(decimal_number)[2:].upper()
-
-# INPUT FROM USER
-        octal_number = input("Enter an octal number: ")
-        convert_octal(octal_number)
 
 # DISPLAY RESULTS
         print(f"Octal: {octal_number}")
@@ -91,3 +87,8 @@ def convert_octal(octal_number):
         print(f"Hexadecimal: {hexadecimal_number}")
     except ValueError:
         print("Invalid octal number. Please provide a valid octal input.")
+
+
+# INPUT FROM USER
+octal_number = input("Enter an octal number: ")
+convert_to_octal(octal_number, 8)
